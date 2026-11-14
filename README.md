@@ -1,16 +1,34 @@
-# React + Vite
+# VOLTWISE Engineering — Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Public website for **VOLTWISE Engineering Limited** (Sparking Change): services, how we work, company profile, team and contact. Built with Vite + React, deployed on Netlify.
 
-Currently, two official plugins are available:
+## Run it
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # production files in dist/
+npm run lint
+```
 
-## React Compiler
+## Edit the content
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+All text, contact details, services, team and photo links are in **`src/data/site.js`**.
 
-## Expanding the ESLint configuration
+- **Phone / WhatsApp:** `contact.phoneDisplay`, `contact.phoneHref` and `contact.whatsappNumber` (international format without `+`).
+- **Services, sectors, process, values, team:** the arrays of the same names.
+- **Photos:** the `images` object.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The contact form has no backend: it opens WhatsApp with the visitor's message already filled in, ready to send to the company number.
+
+## Photos
+
+The photos are from [Pexels](https://www.pexels.com/) and are free to use, including commercially, without attribution, under the [Pexels License](https://www.pexels.com/license/). They load from the Pexels image service. To host them yourself (recommended for full control), download each photo, save it in `public/images/`, and change its URL in `src/data/site.js` to `/images/<file>.jpg`.
+
+Replacing them with photos of your own team and projects will make the site stronger still.
+
+## Deploy on Netlify
+
+1. In Netlify: **Add new project → Import an existing project** and pick this repository.
+2. Build settings come from `netlify.toml` (`npm run build`, publish `dist`).
+3. Deploy. Every push to `main` redeploys automatically.
