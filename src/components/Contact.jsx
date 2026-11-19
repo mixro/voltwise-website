@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { contact, services, whatsappLink } from '../data/site.js';
+import { allServices, contact, whatsappLink } from '../data/site.js';
 import { ChatIcon, PhoneIcon, PinIcon } from './Icons.jsx';
 
 const empty = { name: '', phone: '', service: '', message: '' };
@@ -33,8 +33,8 @@ export default function Contact() {
     <section id="contact" className="section">
       <div className="wrap contact">
         <div className="contact-info">
-          <span className="kicker">Contact</span>
-          <h2 className="title">Let&apos;s talk about your project.</h2>
+          <span className="kicker">Reach us</span>
+          <h2 className="title">Talk to an engineer.</h2>
           <p className="lead">Call, WhatsApp or send the form — it opens WhatsApp with your message ready to send.</p>
 
           <ul className="contact-list">
@@ -88,7 +88,7 @@ export default function Contact() {
             <span>Service</span>
             <select value={form.service} onChange={update('service')}>
               <option value="">Choose a service</option>
-              {services.map((s) => (
+              {allServices.map((s) => (
                 <option key={s.id} value={s.title}>
                   {s.title}
                 </option>

@@ -1,6 +1,18 @@
 # VOLTWISE Engineering — Website
 
-Public website for **VOLTWISE Engineering Limited** (Sparking Change): services, how we work, company profile, team and contact. Built with Vite + React, deployed on Netlify.
+Public website for **VOLTWISE Engineering Limited** (Sparking Change). Built with Vite + React, deployed on Netlify.
+
+## Pages
+
+| URL | Page |
+| --- | --- |
+| `/` | Home: hero, the two service pillars, why VOLTWISE, process, call-to-action |
+| `/services` | All nine services — Electrical (`#electrical`) and ICT & Digital (`#ict`) — plus integrated solutions and sectors |
+| `/about` | Who we are, vision, mission, values, how we work, health & safety |
+| `/team` | Leadership and engineering team |
+| `/contact` | Phone, WhatsApp, office and a form that opens WhatsApp |
+
+Routing is handled by a small built-in router (`src/Router.jsx`) — no extra package. `netlify.toml` sends every URL to `index.html` so direct links work.
 
 ## Run it
 
@@ -13,19 +25,18 @@ npm run lint
 
 ## Edit the content
 
-All text, contact details, services, team and photo links are in **`src/data/site.js`**.
+All text, contact details, services, team and photo paths are in **`src/data/site.js`**. Pages are in `src/pages/`.
 
 - **Phone / WhatsApp:** `contact.phoneDisplay`, `contact.phoneHref` and `contact.whatsappNumber` (international format without `+`).
-- **Services, sectors, process, values, team:** the arrays of the same names.
+- **Services:** `electricalServices` and `ictServices`.
+- **Sectors, process, values, team:** the arrays of the same names.
 - **Photos:** the `images` object.
 
 The contact form has no backend: it opens WhatsApp with the visitor's message already filled in, ready to send to the company number.
 
 ## Photos
 
-The photos are from [Pexels](https://www.pexels.com/) and are free to use, including commercially, without attribution, under the [Pexels License](https://www.pexels.com/license/). They load from the Pexels image service. To host them yourself (recommended for full control), download each photo, save it in `public/images/`, and change its URL in `src/data/site.js` to `/images/<file>.jpg`.
-
-Replacing them with photos of your own team and projects will make the site stronger still.
+All photos are free-to-use stock photos (no attribution required) stored in `public/images/`. To change one, replace the file (keep the name) or add a new file and update its path in the `images` object in `src/data/site.js`. Photos of your own team and projects will make the site stronger still.
 
 ## Deploy on Netlify
 

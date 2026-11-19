@@ -1,14 +1,14 @@
 import { contact, images, whatsappLink } from '../data/site.js';
 import { ChatIcon, PhoneIcon } from './Icons.jsx';
 
-export default function CallBand() {
+export default function CallBand({ title = 'Have a project or a problem with your power or network?' }) {
   return (
     <section className="band">
-      <img className="band-img" src={images.field} alt="" loading="lazy" />
+      <img className="band-img" src={images.linework} alt="" loading="lazy" />
       <div className="band-shade" />
       <div className="wrap band-inner">
         <div>
-          <h2 className="title title-light">Have a project or a problem with your power?</h2>
+          <h2 className="title title-light">{title}</h2>
           <p className="lead lead-light">Talk to an engineer today — call us or send a WhatsApp message.</p>
         </div>
         <div className="band-actions">

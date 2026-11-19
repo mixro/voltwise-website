@@ -1,19 +1,20 @@
 import { contact, images, whatsappLink } from '../data/site.js';
-import { ChatIcon, ClipboardIcon, GaugeIcon, PhoneIcon, ShieldIcon } from './Icons.jsx';
+import { Link } from '../Router.jsx';
+import { ArrowIcon, ChatIcon, ClipboardIcon, GaugeIcon, PhoneIcon, ShieldIcon } from './Icons.jsx';
 
 export default function Hero() {
   return (
-    <section id="top" className="hero">
-      <img className="hero-img" src={images.hero} alt="" fetchPriority="high" />
+    <section className="hero">
+      <img className="hero-img" src={images.hero} alt="" fetchPriority="high" style={{ objectPosition: '62% center' }} />
       <div className="hero-shade" />
       <div className="wrap hero-inner">
-        <span className="kicker kicker-light">Electrical engineering · Dar es Salaam</span>
+        <span className="kicker kicker-light">Electrical &amp; ICT engineering · Dar es Salaam</span>
         <h1 className="hero-title">
-          Safe, reliable power — <span className="red">built and tested</span> by engineers.
+          Power and connectivity, <span className="red">engineered properly.</span>
         </h1>
         <p className="hero-lead">
-          VOLTWISE Engineering designs, installs, tests and audits electrical systems for homes, businesses and industry
-          across Tanzania.
+          VOLTWISE Engineering designs, installs, tests and supports electrical and ICT systems for homes, businesses and
+          industry across Tanzania.
         </p>
         <div className="hero-actions">
           <a className="btn btn-red btn-lg" href={whatsappLink()} target="_blank" rel="noreferrer">
@@ -24,6 +25,9 @@ export default function Hero() {
             <PhoneIcon />
             Call {contact.phoneDisplay}
           </a>
+          <Link className="btn btn-link btn-lg" to="/services">
+            Our services <ArrowIcon width={18} height={18} />
+          </Link>
         </div>
       </div>
 
@@ -39,15 +43,15 @@ export default function Hero() {
           <li>
             <GaugeIcon />
             <span>
-              <strong>LV &amp; HT testing</strong>
-              Commissioning before energisation
+              <strong>Tested before handover</strong>
+              Circuits, equipment and network points
             </span>
           </li>
           <li>
             <ClipboardIcon />
             <span>
               <strong>Written records</strong>
-              Test results and reports you keep
+              Test results and documentation you keep
             </span>
           </li>
         </ul>

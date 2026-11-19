@@ -1,5 +1,6 @@
 import logoDark from '../assets/logo-dark.png';
-import { company, contact, nav, services, whatsappLink } from '../data/site.js';
+import { company, contact, electricalServices, ictServices, nav, whatsappLink } from '../data/site.js';
+import { Link } from '../Router.jsx';
 
 export default function Footer() {
   return (
@@ -7,14 +8,24 @@ export default function Footer() {
       <div className="wrap footer-grid">
         <div className="footer-brand">
           <img src={logoDark} alt="VOLTWISE — Sparking Change" />
-          <p>Electrical construction, testing &amp; commissioning, and auditing in Tanzania.</p>
+          <p>Electrical engineering and ICT solutions in Tanzania — power and connectivity, engineered properly.</p>
         </div>
         <div>
-          <h4>Services</h4>
+          <h4>Electrical</h4>
           <ul>
-            {services.map((s) => (
+            {electricalServices.map((s) => (
               <li key={s.id}>
-                <a href="#services">{s.title}</a>
+                <Link to={`/services#${s.id}`}>{s.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h4>ICT &amp; Digital</h4>
+          <ul>
+            {ictServices.map((s) => (
+              <li key={s.id}>
+                <Link to={`/services#${s.id}`}>{s.title}</Link>
               </li>
             ))}
           </ul>
@@ -23,8 +34,8 @@ export default function Footer() {
           <h4>Company</h4>
           <ul>
             {nav.map((n) => (
-              <li key={n.href}>
-                <a href={n.href}>{n.label}</a>
+              <li key={n.to}>
+                <Link to={n.to}>{n.label}</Link>
               </li>
             ))}
           </ul>
