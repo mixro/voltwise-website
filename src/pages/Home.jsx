@@ -1,8 +1,15 @@
 import Hero from '../components/Hero.jsx';
 import CallBand from '../components/CallBand.jsx';
-import { ArrowIcon, CheckIcon } from '../components/Icons.jsx';
+import { ArrowIcon, CheckIcon, ChecklistIcon, EngineeringIcon, PowerDataIcon, ShieldIcon } from '../components/Icons.jsx';
 import { electricalServices, ictServices, images, process, why } from '../data/site.js';
 import { Link } from '../Router.jsx';
+
+const whyIcons = {
+  engineering: EngineeringIcon,
+  powerData: PowerDataIcon,
+  safety: ShieldIcon,
+  documented: ChecklistIcon,
+};
 
 function Pillar({ num, title, text, image, alt, items, to, dark }) {
   return (
@@ -71,17 +78,21 @@ export default function Home() {
           <div className="section-head">
             <span className="kicker">Why VOLTWISE</span>
             <h2 className="title">Engineering you can check.</h2>
+            <p className="lead">Four commitments behind every VOLTWISE job, from a single socket to a full server room.</p>
           </div>
           <div className="why">
-            {why.map((w) => (
-              <div key={w.title} className="why-item">
-                <svg width="24" height="36" viewBox="0 0 20 30" aria-hidden="true">
-                  <path d="M14 0L2 17h7l-3 13L18 12h-7l3-12z" fill="#D7202A" />
-                </svg>
-                <strong>{w.title}</strong>
-                <span>{w.text}</span>
-              </div>
-            ))}
+            {why.map((w) => {
+              const Icon = whyIcons[w.icon];
+              return (
+                <div key={w.title} className="why-item">
+                  <span className="why-icon">
+                    <Icon width={26} height={26} />
+                  </span>
+                  <strong>{w.title}</strong>
+                  <span>{w.text}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

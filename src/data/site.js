@@ -162,11 +162,12 @@ export const process = [
   { title: 'Handover & support', text: 'We commission the system, hand over records and documentation, and stay available for support.' },
 ];
 
+// `icon` matches a key in the icon map on the Home page.
 export const why = [
-  { title: 'Engineering-led', text: 'Every job is designed, supervised and checked by engineers.' },
-  { title: 'Power and data, one team', text: 'Electrical and ICT work planned together — one contractor, one point of accountability.' },
-  { title: 'Safety first', text: 'Independent safety oversight and stop-work authority on every site.' },
-  { title: 'Tested and documented', text: 'Test records, labelling and written reports come with every job.' },
+  { icon: 'engineering', title: 'Engineering-led', text: 'Every job is designed, supervised and checked by engineers.' },
+  { icon: 'powerData', title: 'Power and data, one team', text: 'Electrical and ICT work planned together — one contractor, one point of accountability.' },
+  { icon: 'safety', title: 'Safety first', text: 'Independent safety oversight and stop-work authority on every site.' },
+  { icon: 'documented', title: 'Tested and documented', text: 'Test records, labelling and written reports come with every job.' },
 ];
 
 export const vision =

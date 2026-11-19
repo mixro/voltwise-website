@@ -416,6 +416,8 @@ a {
 }
 
 .service-media img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -583,6 +585,7 @@ a {
 }
 
 .process-media {
+  position: relative;
   border-radius: var(--radius);
   overflow: hidden;
   aspect-ratio: 4 / 5;
@@ -590,6 +593,8 @@ a {
 }
 
 .process-media img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -613,6 +618,8 @@ a {
 }
 
 .about-media img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1059,14 +1066,23 @@ a {
 }
 
 .pillar-media {
-  aspect-ratio: 16 / 8;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
   background: var(--ink-2);
 }
 
 .pillar-media img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.pillar:hover .pillar-media img {
+  transform: scale(1.03);
 }
 
 .pillar-body {
@@ -1136,22 +1152,43 @@ a {
 .why-item {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 28px 24px;
-  border-radius: 14px;
+  gap: 12px;
+  padding: 32px 28px;
+  border-radius: 16px;
   background: #fff;
   border: 1px solid var(--line);
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.why-item:hover {
+  border-color: #f2c4c6;
+  box-shadow: 0 16px 36px rgba(14, 15, 17, 0.07);
+  transform: translateY(-2px);
+}
+
+.why-icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 8px;
+  border-radius: 14px;
+  background: #fdecec;
+  color: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .why-item strong {
   font-family: var(--display);
   font-weight: 800;
   font-size: 19px;
+  line-height: 1.25;
   color: var(--ink);
 }
 
-.why-item span {
+.why-item span:last-child {
   font-size: 15px;
+  line-height: 1.6;
   color: var(--muted);
 }
 

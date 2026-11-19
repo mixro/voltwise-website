@@ -64,6 +64,34 @@ export const ClipboardIcon = (p) => (
   </svg>
 );
 
+// Gear: engineering-led work
+export const EngineeringIcon = (p) => (
+  <svg {...base} {...p}>
+    <circle cx="12" cy="12" r="3" />
+    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+  </svg>
+);
+
+// Power feeding a small network: power and data, one team
+export const PowerDataIcon = (p) => (
+  <svg {...base} {...p}>
+    <path d="M13 2l-3.5 5h4L11 11.5" />
+    <rect x="2.5" y="17" width="5" height="4.5" rx="1" />
+    <rect x="9.5" y="17" width="5" height="4.5" rx="1" />
+    <rect x="16.5" y="17" width="5" height="4.5" rx="1" />
+    <path d="M12 13v4M5 17v-2.5h14V17" />
+  </svg>
+);
+
+// Clipboard with a tick: tested and documented
+export const ChecklistIcon = (p) => (
+  <svg {...base} {...p}>
+    <path d="M9 4H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2" />
+    <rect x="9" y="2" width="6" height="4" rx="1" />
+    <path d="M8.5 14l2.5 2.5 4.5-5" />
+  </svg>
+);
+
 export const BoltIcon = (p) => (
   <svg {...base} {...p}>
     <path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" />
