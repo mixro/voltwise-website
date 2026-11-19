@@ -28,7 +28,7 @@ export const nav = [
 
 // Photos are stored in public/images/ (free-to-use stock photos, no attribution required).
 export const images = {
-  hero: '/images/testing-panel.jpg',
+  hero: '/images/hero-power-data.jpg',
   substation: '/images/substation.jpg',
   lvBoard: '/images/lv-board.jpg',
   testingMeter: '/images/testing-meter.jpg',

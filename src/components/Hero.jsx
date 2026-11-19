@@ -5,12 +5,12 @@ import { ArrowIcon, ChatIcon, ClipboardIcon, GaugeIcon, PhoneIcon, ShieldIcon } 
 export default function Hero() {
   return (
     <section className="hero">
-      <img className="hero-img" src={images.hero} alt="" fetchPriority="high" style={{ objectPosition: '62% center' }} />
+      <img className="hero-img" src={images.hero} alt="" fetchPriority="high" style={{ objectPosition: '70% center' }} />
       <div className="hero-shade" />
       <div className="wrap hero-inner">
         <span className="kicker kicker-light">Electrical &amp; ICT engineering · Dar es Salaam</span>
         <h1 className="hero-title">
-          Power and connectivity, <span className="red">engineered properly.</span>
+          Power and connectivity, <span className="red">engineered.</span>
         </h1>
         <p className="hero-lead">
           VOLTWISE Engineering designs, installs, tests and supports electrical and ICT systems for homes, businesses and
